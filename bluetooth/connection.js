@@ -12,7 +12,7 @@ document.querySelector('#connect').addEventListener('click', () => {
         .then(device => {
         console.log('> Found ' + device.name);
     console.log('Connecting to GATT Server...');
-    return device.connectGATT();
+    return device.gatt.connect();
 })
 .then(server => {
         // gattServer = server;
